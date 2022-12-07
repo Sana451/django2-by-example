@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 
+SITE_ID = 1
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -36,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -125,4 +130,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # send_mail('Django.mail', 'This e-mail was sent with Django.')
 # EMAIL_HOST = 'localhost'
 # EMAIL_PORT = 8026
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sanamamail451@gmail.com'
+EMAIL_HOST_PASSWORD = 'brxqydyjbjmljwki'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
