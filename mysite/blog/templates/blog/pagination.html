@@ -1,13 +1,13 @@
 <div class="paginator">
   <span class="step-links">
     {% if posts.has_previous %}
-      <a href="?page={{ posts.previous_page_number }}">Previous</a>
+      <a href="?page={{ posts.previous_page_number }}">Предыдущая</a>
     {% endif %}
       <span class="current">
-        Page {{ posts.number }} ocf {{ posts.paginator.num_pages }}.
+        Страница {{ posts.number }} из {{ posts.paginator.num_pages }}.
       </span>
     {% if posts.has_next %}
-      <a href="?page={{ posts.next_page_number }}">Next</a>
+      <a href="?page={{ posts.next_page_number }}">Следующая</a>
     {% endif %}
   </span>
 </div>

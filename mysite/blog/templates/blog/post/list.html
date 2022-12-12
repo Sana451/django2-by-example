@@ -4,15 +4,15 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-<h1>My blog</h1>
+<h1>Мой блог</h1>
 {% for post in posts %}
 <h2>
     <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
 </h2>
 
-    <p class="tags">Tags:
+    <p class="tags">Теги:
 {% if tag %}
-    <h2>Posts tagged with '{{ tag.name }}'</h2>
+    <h2>Посты помеченные тегом: '{{ tag.name }}'</h2>
 {% endif %}
     {% for tag in post.tags.all %}
         <a href="{% url 'blog:post_list_by_tag' tag.slug %}">{{ tag.name }}</a>
